@@ -85,6 +85,10 @@ class UI {
     }
   }
 
+  removeSearchDataUI() {
+    this.lastUsers.innerHTML = ""
+  }
+
   displayMessage(message) {
     const div = document.createElement("div")
     div.className = "alert alert-danger"

@@ -40,7 +40,10 @@ function getData(e) {
 }
 
 function clearAllSearchUsers() {
-
+  if (confirm("Silmek istediğinden emin misin dostum ??")) {
+    Storage.removeSearchDataLocalStorage()
+    ui.removeSearchDataUI()    
+  }
 }
 
 
