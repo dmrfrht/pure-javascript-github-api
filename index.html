@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container searchContainer">
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <div class="card mt-5">
+          <div class="card-header text-center">
+            <b>GITHUB API</b>
+          </div>
+          <div class="card-body">
+            <form id="github-form">
+              <div class="mb-3">
+                <label for="github-name" class="form-label">github kullanıcı adınız</label>
+                <input type="text" class="form-control" id="github-name" placeholder="..">
+              </div>
+
+              <div class="mb-3">
+                <button class="btn btn-primary">Arama..</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="card mt-5">
+          <div class="card-header text-center">
+            <b>Profilim</b>
+          </div>
+          <div class="card-body" id="profile">
+            <!-- <div class="row">
+              <div class="col-md-4">
+                <a href="" target="_blank">
+                  <img class="img-fluid mb-2" src="https://upload.wikimedia.org/wikipedia/tr/a/a0/Cem_Karaca.jpg">
+                </a>
+                <hr>
+                <div id="fullName"><strong> Mustafa Murat Coşkun</strong></div>
+                <hr>
+                <div id="bio">asdasdasdsad</div>
+              </div>
+              <div class="col-md-8">
+                <button class="btn btn-secondary">
+                  Takipçi <span class="badge badge-light"></span>
+                </button>
+                <button class="btn btn-info">
+                  Takip Edilen <span class="badge badge-light"></span>
+                </button>
+                <button class="btn btn-danger">
+                  Repolar <span class="badge badge-light"></span>
+                </button>
+                <hr>
+                <li class="list-group">
+                <li class="list-group-item borderzero">
+                  <img src="images/company.png" width="30px"> <span id="company">Naber</span>
+
+                </li>
+                <li class="list-group-item borderzero">
+                  <img src="images/location.png" width="30px"> <span id="location">sadasdsad</a>
+
+                </li>
+                <li class="list-group-item borderzero">
+                  <img src="images/mail.png" width="30px"> <span id="company">Naber</span>
+                </li>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="card mt-5">
+          <div class="card-header text-center">
+            <b>Son Repolarım</b>
+          </div>
+          <div class="card-body" id="repos">
+            <!-- <div class="mb-2 card-body">
+              <div class="row">
+                <div class="col-md-2">
+                  <span></span>
+                  <a href="#" target="_blank" id="repoName"></a>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-secondary">
+                    Starlar <span class="badge badge-light" id="repoStar"></span>
+                  </button>
+
+                  <button class="btn btn-info">
+                    Forklar <span class="badge badge-light" id="repoFork"></span>
+                  </button>
+
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="card mt-5">
+          <div class="card-header text-center">
+            <b>Son Aramalarım</b>
+          </div>
+          <div class="card-body" id="lastSearch">
+            <ul class="list-group" id="last-users">
+              <!-- <li class="list-group-item">asdaskdjkasjkşdjşasjd</li> -->
+            </ul>
+            <br>
+            <button class="btn btn-warning btn-sm" id="clear-last-users">Aramalarını temizleyiniz..</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="./js/github.js"></script>
+  <script src="./js/storage.js"></script>
+  <script src="./js/ui.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
