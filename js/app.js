@@ -26,8 +26,8 @@ function getData(e) {
         if (res.userData.message === "Not Found") {
           ui.displayMessage("Böyle bir kullanıcı bulunamadı dostum :[")
         } else {
-          console.log(res)
           ui.userDetails(res.userData)
+          ui.repoDetails(res.repoData)
         }
       })
       .catch(err => ui.displayMessage(err))
