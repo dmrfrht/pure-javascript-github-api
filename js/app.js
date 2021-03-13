@@ -4,6 +4,7 @@ const clearAllUsers = document.querySelector("#clear-all-users")
 const lastUsers = document.querySelector("#last-users")
 
 const github = new GithubAPI()
+const ui = new UI()
 
 eventListener()
 function eventListener() {
@@ -26,11 +27,13 @@ function getData(e) {
           alert("Böyle bir kullanıcı bulunamadı dostum :[")
         } else {
           console.log(res)
+          ui.userDetails(res.userData)
         }
       })
       .catch(err => console.error(err))
   }
 
+  ui.clearInput()
   e.preventDefault()
 }
 
