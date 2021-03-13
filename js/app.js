@@ -11,7 +11,7 @@ function eventListener() {
   form.addEventListener("submit", getData)
   clearAllUsers.addEventListener("click", clearAllSearchUsers)
   document.addEventListener("DOMContentLoaded", function () {
-
+    ui.addSearchDataToUI(JSON.parse(localStorage.getItem("users")))
   })
 }
 
@@ -19,13 +19,15 @@ function getData(e) {
   let userName = userNameInput.value.trim()
 
   if (userName === "") {
-    alert("Kullanıcı adı giriniz..")
+    ui.displayMessage("Kullanıcı adı giriniz..")
   } else {
     github.getData(userName)
       .then(res => {
         if (res.userData.message === "Not Found") {
           ui.displayMessage("Böyle bir kullanıcı bulunamadı dostum :[")
         } else {
+          ui.addSearchDataToUI(userName)
+          Storage.addSearchDataToLocalStorage(userName)
           ui.userDetails(res.userData)
           ui.repoDetails(res.repoData)
         }

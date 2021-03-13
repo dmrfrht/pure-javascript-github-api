@@ -74,6 +74,17 @@ class UI {
     })
   }
 
+  addSearchDataToUI(userName) {
+    let users = Storage.getSearchDataFromLocalStorage()
+
+    if (users.indexOf(userName) === -1) {
+      const li = document.createElement("li")
+      li.className = "list-group-item"
+      li.textContent = userName
+      lastUsers.appendChild(li)
+    }
+  }
+
   displayMessage(message) {
     const div = document.createElement("div")
     div.className = "alert alert-danger"
