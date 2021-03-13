@@ -24,13 +24,13 @@ function getData(e) {
     github.getData(userName)
       .then(res => {
         if (res.userData.message === "Not Found") {
-          alert("Böyle bir kullanıcı bulunamadı dostum :[")
+          ui.displayMessage("Böyle bir kullanıcı bulunamadı dostum :[")
         } else {
           console.log(res)
           ui.userDetails(res.userData)
         }
       })
-      .catch(err => console.error(err))
+      .catch(err => ui.displayMessage(err))
   }
 
   ui.clearInput()

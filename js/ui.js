@@ -49,5 +49,15 @@ class UI {
     `
   }
 
+  displayMessage(message) {
+    const div = document.createElement("div")
+    div.className = "alert alert-danger"
+    div.textContent = message
+    this.profile.appendChild(div)
+
+    setTimeout(() => {
+      div.remove()
+    }, 3000)
+  }
 
 }
